@@ -1,0 +1,68 @@
+{
+  "name": "DigitalVisitorGuide",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "version": "./npm-version/version-ios.sh",
+    "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean --force",
+    "clean:android": "cd android/ && ./gradlew clean && cd .. && react-native run-android",
+    "newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build && rm -rf node_modules/ && npm cache clean --force && npm i",
+    "android:build": "cd android && ./gradlew assembleRelease",
+    "android:install": "cd android && ./gradlew assembleRelease && ./gradlew installRelease",
+    "android:devices": "$ANDROID_HOME/platform-tools/adb devices",
+    "android:logcat": "$ANDROID_HOME/platform-tools/adb logcat *:S ReactNative:V ReactNativeJS:V",
+    "android:shake": "$ANDROID_HOME/platform-tools/adb devices | grep '\\t' | awk '{print $1}' | sed 's/\\s//g' | xargs -I {} $ANDROID_HOME/platform-tools/adb -s {} shell input keyevent 82",
+    "lint": "standard --verbose | snazzy",
+    "lintdiff": "git diff --name-only --cached --relative | grep '\\.js$' | xargs standard | snazzy",
+    "fixcode": "standard --fix",
+    "git-hook": "npm run lint -s && npm run test -s"
+  },
+  "dependencies": {
+    "apisauce": "^0.14.0",
+    "lodash": "^4.17.2",
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.48.4",
+    "react-native-animatable": "^1.2.4",
+    "react-native-config": "^0.6.0",
+    "react-native-fabric": "^0.5.1",
+    "react-native-i18n": "1.0.0",
+    "react-native-navigation": "^1.1.230",
+    "react-native-vector-icons": "4.3.0",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.1.1",
+    "babel-jest": "21.2.0",
+    "babel-preset-react-native": "3.0.2",
+    "ignite-animatable": "^1.0.0",
+    "ignite-i18n": "^1.1.1",
+    "ignite-standard": "^1.0.0",
+    "ignite-vector-icons": "^1.1.0",
+    "jest": "21.2.1",
+    "react-test-renderer": "16.0.0-alpha.12",
+    "snazzy": "^7.0.0",
+    "standard": "10.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "describe",
+      "test",
+      "jest",
+      "expect",
+      "fetch",
+      "navigator",
+      "__DEV__",
+      "XMLHttpRequest",
+      "FormData",
+      "React$Element"
+    ]
+  }
+}
