@@ -54,6 +54,8 @@
 		A2470ACEFA594019A276A42C /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2987E33468524C9C9E2BE77E /* libReactNativeConfig.a */; };
 		52980959BE7B480780467279 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 839E913068BE42DDAD6B48A5 /* libReactNativeNavigation.a */; };
 		1BEE1B8D3BF946AB96C97A67 /* libSMXCrashlytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB263F5DC9EE44DA82935E56 /* libSMXCrashlytics.a */; };
+		4ACA80A5F23E43E3977167CE /* FaraoText.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4AD06AF378274822B8879E93 /* FaraoText.ttf */; };
+		63B1BF45B5E4428198D2C53A /* FaraoOTRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8F6BCF5A96447928279E985 /* FaraoOTRegular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -304,6 +306,8 @@
 		839E913068BE42DDAD6B48A5 /* libReactNativeNavigation.a */ = {isa = PBXFileReference; name = "libReactNativeNavigation.a"; path = "libReactNativeNavigation.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		BC9E89DFE4104471B517CB40 /* SMXCrashlytics.xcodeproj */ = {isa = PBXFileReference; name = "SMXCrashlytics.xcodeproj"; path = "../node_modules/react-native-fabric/ios/SMXCrashlytics.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		DB263F5DC9EE44DA82935E56 /* libSMXCrashlytics.a */ = {isa = PBXFileReference; name = "libSMXCrashlytics.a"; path = "libSMXCrashlytics.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		4AD06AF378274822B8879E93 /* FaraoText.ttf */ = {isa = PBXFileReference; name = "FaraoText.ttf"; path = "../app/fonts/FaraoText.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C8F6BCF5A96447928279E985 /* FaraoOTRegular.ttf */ = {isa = PBXFileReference; name = "FaraoOTRegular.ttf"; path = "../app/fonts/FaraoOTRegular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -572,6 +576,8 @@
 				8542AEE086D64F5FBDD308C7 /* Octicons.ttf */,
 				5CDE0E89C5EB413FAC652721 /* SimpleLineIcons.ttf */,
 				AAFF9A75E5C6469B93011B10 /* Zocial.ttf */,
+				4AD06AF378274822B8879E93 /* FaraoText.ttf */,
+				C8F6BCF5A96447928279E985 /* FaraoOTRegular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -956,6 +962,8 @@
 				D5211C54D00D43EAB81203E7 /* Octicons.ttf in Resources */,
 				7DD24C86B26B453BA8AC6A9A /* SimpleLineIcons.ttf in Resources */,
 				3FC1D5225D2547D19839FCC9 /* Zocial.ttf in Resources */,
+				4ACA80A5F23E43E3977167CE /* FaraoText.ttf in Resources */,
+				63B1BF45B5E4428198D2C53A /* FaraoOTRegular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

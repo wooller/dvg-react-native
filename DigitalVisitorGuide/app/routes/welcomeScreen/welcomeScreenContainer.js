@@ -5,9 +5,9 @@
  */
 
 import React, { Component } from 'react';
-import FirstScreen from './firstScreen';
+import WelcomeScreen from './welcomeScreen';
 
-class firstScreenContainer extends Component {
+class welcomeScreenContainer extends Component {
     static navigatorStyle = {
         navBarHidden: true,
     };
@@ -18,9 +18,9 @@ class firstScreenContainer extends Component {
 
     render() {
         return (
-            <FirstScreen navigator={ this.props.navigator }  />
+            <WelcomeScreen navigator={ this.props.navigator }  />
         );
     }
 }
 
-export default (firstScreenContainer);
+export default (welcomeScreenContainer);

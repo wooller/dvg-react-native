@@ -18,7 +18,12 @@ Navigation.startSingleScreenApp({
         keepStyleAcrossPush: false
     },
     screen: {
-        screen: 'reactNativeTemplate.firstScreenName',
-        title: 'First Screen'
+        screen: 'digitalVisitorGuide.welcomeScreen',
+    },
+    drawer: {
+      right: {
+        screen: 'digitalVisitorGuide.primarySideMenu',
+        passProps: {}
+      }
     }
 });

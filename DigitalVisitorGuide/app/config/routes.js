@@ -4,10 +4,12 @@
  */
 
 import { Navigation } from 'react-native-navigation';
-import FirstScreen from '../routes/firstScreen/index';
+import WelcomeScreen from '../routes/welcomeScreen/index';
 import SecondScreen from '../routes/secondScreen/index';
+import PrimarySideMenu from '../routes/primarySideMenu/index';
 
 export function registerScreens(store, Provider) {
-    Navigation.registerComponent('reactNativeTemplate.firstScreenName', () => FirstScreen, store, Provider);
-    Navigation.registerComponent('reactNativeTemplate.secondScreenName', () => SecondScreen, store, Provider);
+    Navigation.registerComponent('digitalVisitorGuide.welcomeScreen', () => WelcomeScreen, store, Provider);
+    Navigation.registerComponent('digitalVisitorGuide.secondScreenName', () => SecondScreen, store, Provider);
+    Navigation.registerComponent('digitalVisitorGuide.primarySideMenu', () => PrimarySideMenu, store, Provider);
 }
