@@ -11,8 +11,9 @@ import textStyles from '../../config/textStyles';
 import buttonStyles from '../../config/buttonStyles';
 import images from '../../config/images';
 import Button from '../../components/button/index'
+import MenuButton from '../../components/menuButton/index'
 
-export default class FirstScreen extends PureComponent {
+export default class WelcomeScreen extends PureComponent {
     constructor(props) {
         super(props);
     }
@@ -22,13 +23,15 @@ export default class FirstScreen extends PureComponent {
             <Image style={styles.image} source={images.welcomeScreenImage}>
                 <View style={styles.imageOverlay}></View>
                 <View style={styles.container}>
-                  <View style={styles.topContainer}>
+                  <View style={styles.headerContainer}>
                     <Image style={styles.logoImage} source={images.towerOfLondonLogo} />
+                    <MenuButton style={styles.menuButton} onPress={() => this.props.navigator.toggleDrawer({side: 'right', animated: true}) }/>
                   </View>
+                  <View style={styles.middleContainer} />
                   <View style={styles.bottomContainer}>
                     <Text style={[textStyles.headingOne, styles.titleText]}>Fortress, Palace and Prison</Text>
                     <Text style={[textStyles.headingTwo, styles.subtitleText]}>Discover three sides of the Towers amazing story</Text>
-                    <Button text={'Get Started'} buttonStyles={[buttonStyles.buttonOne, styles.button]} textStyles={buttonStyles.buttonOneText} hasChevron={true} onPress={() => this.props.navigator.toggleDrawer({side: 'right', animated: true}) }/>
+                    <Button text={'Get Started'} buttonStyles={[buttonStyles.buttonOne, styles.button]} textStyles={buttonStyles.buttonOneText} hasChevron={true}/>
                   </View>
                 </View>
             </Image>

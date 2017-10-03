@@ -18,8 +18,7 @@ Navigation.startSingleScreenApp({
         keepStyleAcrossPush: false
     },
     screen: {
-        screen: 'digitalVisitorGuide.firstScreenName',
-        title: 'First Screen'
+        screen: 'digitalVisitorGuide.welcomeScreen',
     },
     drawer: {
       right: {

@@ -33,11 +33,16 @@ export default StyleSheet.create({
       width: 123,
       resizeMode: 'contain'
     },
-    topContainer: {
-      flex: 1
+    middleContainer: {
+      flex: 1,
+    },
+    headerContainer:{
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center'
     },
     bottomContainer: {
-      flex: 1
+      flex: 1.3
     },
     titleText: {
       color: 'white'
