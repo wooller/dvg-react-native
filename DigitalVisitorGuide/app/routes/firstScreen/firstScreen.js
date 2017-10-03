@@ -7,6 +7,8 @@
 import React, { PureComponent } from 'react';
 import { Text, View, Image, StatusBar, TextInput } from 'react-native';
 import styles from './styles';
+import textStyles from '../../config/textStyles';
+import buttonStyles from '../../config/buttonStyles';
 import images from '../../config/images';
 import Button from '../../components/button/index'
 
@@ -17,9 +19,17 @@ export default class FirstScreen extends PureComponent {
 
     render() {
         return (
-            <Image style={styles.image} source={images.exampleImage}>
+            <Image style={styles.image} source={images.welcomeScreenImage}>
+                <View style={styles.imageOverlay}></View>
                 <View style={styles.container}>
-                    <Button style={styles.loginButton} buttonStyles={ styles.loginButton } textStyles={ styles.loginButtonText } text="Login" onPress={() => this.props.navigator.push({screen: 'reactNativeTemplate.secondScreenName', title: 'second screen', backButtonHidden: true})}/>
+                  <View style={styles.topContainer}>
+                    <Image style={styles.logoImage} source={images.towerOfLondonLogo} />
+                  </View>
+                  <View style={styles.bottomContainer}>
+                    <Text style={[textStyles.headingOne, styles.titleText]}>Fortress, Palace and Prison</Text>
+                    <Text style={[textStyles.headingTwo, styles.subtitleText]}>Discover three sides of the Towers amazing story</Text>
+                    <Button text={'Get Started'} buttonStyles={[buttonStyles.buttonOne, styles.button]} textStyles={buttonStyles.buttonOneText} hasChevron={true}/>
+                  </View>
                 </View>
             </Image>
         );

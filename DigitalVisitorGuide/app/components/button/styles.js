@@ -11,11 +11,17 @@ export default StyleSheet.create({
         paddingVertical: 20,
         alignSelf: "stretch",
         alignItems: 'center',
-        backgroundColor: 'black'
+        backgroundColor: 'black',
+        flexDirection:'row'
+
     },
     buttonText: {
         color: 'white',
         fontSize: 16,
         fontWeight: '500',
+        justifyContent: 'flex-start'
     },
+    chevron:{
+      marginLeft: 30
+    }
 });

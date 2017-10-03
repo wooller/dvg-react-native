@@ -7,14 +7,20 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Button = (props) => {
-    const { buttonStyles, textStyles, text, onPress } = props;
+    const { buttonStyles, textStyles, text, onPress, hasChevron } = props;
+    let chevron = null
+    if (hasChevron){
+       chevron = (<Icon name="chevron-right" style={styles.chevron} size={15} color="#fff" />)
+    }
     return (
         <TouchableOpacity style={[styles.button, buttonStyles]} onPress={onPress}>
             <Text style={[styles.buttonText, textStyles]}>
                 {text}
             </Text>
+            {chevron}
         </TouchableOpacity>
     );
 };
