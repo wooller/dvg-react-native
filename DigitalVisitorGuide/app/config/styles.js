@@ -3,5 +3,6 @@
  * File for global colours/styles
  */
 export const globalStyles = {
-    background: '#F5F2F9'
+    background: '#F5F2F9',
+    accentColor: '#77776E'
 };

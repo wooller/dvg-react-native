@@ -28,7 +28,7 @@ export default class FirstScreen extends PureComponent {
                   <View style={styles.bottomContainer}>
                     <Text style={[textStyles.headingOne, styles.titleText]}>Fortress, Palace and Prison</Text>
                     <Text style={[textStyles.headingTwo, styles.subtitleText]}>Discover three sides of the Towers amazing story</Text>
-                    <Button text={'Get Started'} buttonStyles={[buttonStyles.buttonOne, styles.button]} textStyles={buttonStyles.buttonOneText} hasChevron={true}/>
+                    <Button text={'Get Started'} buttonStyles={[buttonStyles.buttonOne, styles.button]} textStyles={buttonStyles.buttonOneText} hasChevron={true} onPress={() => this.props.navigator.toggleDrawer({side: 'right', animated: true}) }/>
                   </View>
                 </View>
             </Image>
