@@ -4,9 +4,10 @@
  * This is a single source of truth handling all app data, and makes it accessible to the app
  */
 
-import { createStore, compose, applyMiddleware } from 'redux';
+import{  createStore, compose, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import rootReducer from '../reducers';
+import Reactotron from 'reactotron-react-native'
 
 export default function configureStore(initialState) {
     const middewares = [
@@ -14,7 +15,7 @@ export default function configureStore(initialState) {
         thunkMiddleware,
     ];
 
-    return createStore(rootReducer, initialState, compose(
+    return Reactotron.createStore(rootReducer, initialState, compose(
         applyMiddleware(...middewares)
         )
     );

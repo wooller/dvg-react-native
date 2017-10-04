@@ -44,6 +44,8 @@
     "ignite-vector-icons": "^1.1.0",
     "jest": "21.2.1",
     "react-test-renderer": "16.0.0-alpha.12",
+    "reactotron-react-native": "^1.12.3",
+    "reactotron-redux": "^1.12.2",
     "snazzy": "^7.0.0",
     "standard": "10.0.2"
   },
