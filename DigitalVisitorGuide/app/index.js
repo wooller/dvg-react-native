@@ -10,10 +10,14 @@ import { Navigation } from 'react-native-navigation';
 import settings from './config/settings';
 import configureStore from './config/store';
 import { registerScreens } from './config/routes';
-import './config/ReactotronConfig'
+import './config/ReactotronConfig';
+import {requestStoragePermission} from './config/AndroidPermissions';
+import Reactotron from 'reactotron-react-native'
 
 const store = configureStore();
 registerScreens(store, Provider);
+requestStoragePermission();
+Reactotron.log('test');
 
 Navigation.startSingleScreenApp({
     appStyle: {
