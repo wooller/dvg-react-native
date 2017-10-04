@@ -21,7 +21,6 @@ export default class WelcomeScreen extends PureComponent {
     render() {
         return (
             <Image style={styles.image} source={images.welcomeScreenImage}>
-                <View style={styles.imageOverlay}></View>
                 <View style={styles.container}>
                   <View style={styles.headerContainer}>
                     <Image style={styles.logoImage} source={images.towerOfLondonLogo} />
