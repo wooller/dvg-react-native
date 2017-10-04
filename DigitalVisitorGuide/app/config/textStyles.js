@@ -14,5 +14,10 @@ export default StyleSheet.create({
       fontFamily: 'FaraoOTRegular',
       fontSize: 20,
       lineHeight: 30
-    }
+    },
+    headingThree:{
+        fontFamily: 'FaraoText',
+        fontSize: 24,
+        lineHeight: 29
+    },
 });

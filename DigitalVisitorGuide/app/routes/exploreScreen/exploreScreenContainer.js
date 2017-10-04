@@ -4,9 +4,9 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import SecondScreen from './secondScreen';
+import ExploreScreen from './exploreScreen';
 
-class secondScreenContainer extends Component {
+class exploreScreenContainer extends Component {
     static navigatorStyle = {
         navBarHidden: true,
     };
@@ -18,7 +18,7 @@ class secondScreenContainer extends Component {
 
     render() {
         return (
-            <SecondScreen />
+            <ExploreScreen />
         );
     }
 }
@@ -37,4 +37,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(secondScreenContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(exploreScreenContainer);

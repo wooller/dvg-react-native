@@ -10,10 +10,10 @@ import styles from './styles';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const MenuButton = (props) => {
-    const { onPress } = props;
+    const { onPress, color } = props;
     return (
       <TouchableOpacity onPress={onPress}>
-        <Icon name="ios-menu" size={40} color="#fff" />
+        <Icon name="ios-menu" size={40} color={color} />
       </TouchableOpacity>
     );
 };
@@ -24,6 +24,7 @@ MenuButton.propTypes = {
 
 MenuButton.defaultProps = {
     onPress: () => console.log('Button Pressed'),
+    color: '#333333'
 };
 
 export default MenuButton;
