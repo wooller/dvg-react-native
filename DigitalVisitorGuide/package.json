@@ -1,6 +1,6 @@
 {
   "name": "DigitalVisitorGuide",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -44,6 +44,8 @@
     "ignite-vector-icons": "^1.1.0",
     "jest": "21.2.1",
     "react-test-renderer": "16.0.0-alpha.12",
+    "reactotron-react-native": "^1.12.3",
+    "reactotron-redux": "^1.12.2",
     "snazzy": "^7.0.0",
     "standard": "10.0.2"
   },

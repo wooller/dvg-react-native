@@ -10,6 +10,8 @@ import { Navigation } from 'react-native-navigation';
 import settings from './config/settings';
 import configureStore from './config/store';
 import { registerScreens } from './config/routes';
+import './config/ReactotronConfig'
+
 const store = configureStore();
 registerScreens(store, Provider);
 
