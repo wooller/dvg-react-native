@@ -20,4 +20,9 @@ export default StyleSheet.create({
         fontSize: 24,
         lineHeight: 29
     },
+    tabBarHeading:{
+        fontFamily: 'FaraoText',
+        fontSize: 14,
+        lineHeight: 17
+    }
 });
