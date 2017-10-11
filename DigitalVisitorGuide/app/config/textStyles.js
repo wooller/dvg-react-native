@@ -24,5 +24,11 @@ export default StyleSheet.create({
         fontFamily: 'FaraoText',
         fontSize: 14,
         lineHeight: 17
+    },
+    contentAccordionTitle:{
+        fontFamily: 'FaraoText',
+        fontSize: 20,
+        lineHeight: 22,
+        color: 'black'
     }
 });

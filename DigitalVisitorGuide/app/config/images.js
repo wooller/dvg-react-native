@@ -5,7 +5,8 @@
 
 const images = {
     welcomeScreenImage: require('../images/welcome_background_image.jpg'),
-    towerOfLondonLogo: require('../images/tower_of_london_logo.png')
+    towerOfLondonLogo: require('../images/tower_of_london_logo.png'),
+    welcomeAccordionImage: require('../images/welcome_accordion_image.jpg')
 };
 
 export default images;

@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, FlatList } from 'react-native';
 import styles from './styles';
 import images from '../../config/images';
 import MenuButton from '../../components/menuButton/index'
@@ -13,8 +13,36 @@ import textStyles from '../../config/textStyles';
 import TabBar from '../../components/tabBar/index'
 
 import ScrollableTabView, {DefaultTabBar, } from 'react-native-scrollable-tab-view';
+import ContentAccordion from '../../components/contentAccordion/index';
 
 const ExploreScreen = (props) => {
+
+    const sections = [
+        {
+            title: 'Welcome',
+            image: images.welcomeAccordionImage,
+        },
+        {
+            title: 'Welcome',
+            image: images.welcomeAccordionImage,
+        },
+        {
+            title: 'Welcome',
+            image: images.welcomeAccordionImage,
+        },
+        {
+            title: 'Welcome',
+            image: images.welcomeAccordionImage,
+        },
+        {
+            title: 'Welcome',
+            image: images.welcomeAccordionImage,
+        },
+        {
+            title: 'Welcome',
+            image: images.welcomeAccordionImage,
+        }
+    ];
 
     return (
         <View style={styles.container}>
@@ -28,7 +56,12 @@ const ExploreScreen = (props) => {
                 renderTabBar={() => <TabBar />}
                 tabBarTextStyle={textStyles.tabBarHeading}
             >
-                <Text tabLabel='All'>My</Text>
+                <View style={{flex: 1}} tabLabel='All'>
+                    <FlatList
+                        data={[{key: sections}]}
+                        renderItem={({item}) => (<ContentAccordion sections={item.key}/>)}
+                    />
+                </View>
                 <Text tabLabel='Fortress'>test</Text>
                 <Text tabLabel='Palace'>project</Text>
                 <Text tabLabel='Prison'>project</Text>
