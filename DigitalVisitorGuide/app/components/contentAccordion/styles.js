@@ -9,21 +9,53 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     header: {
         height: 255,
-        marginBottom: 10
     },
     spacerContainer: {
         flex: 1,
     },
     headerImage: {
-        flex: 1,
+        resizeMode: 'contain'
+    },
+    headerImageView:{
+        flex: 1
     },
     headerTitle:{
         backgroundColor: 'rgba(255,255,255,0.8)',
         paddingTop: 20,
         paddingBottom: 20,
-        paddingLeft: 15
+        paddingLeft: 15,
     },
     expandedView:{
         height: 250
     },
+    expandedTourLengthView:{
+        flexDirection: 'row',
+        paddingLeft: 15,
+        paddingRight: 15,
+        paddingTop: 20,
+        paddingBottom: 20
+    },
+    expandedTourLengthIcon:{
+        marginRight: 10
+    },
+    expandedTourLength:{
+
+    },
+    expandedDescriptionView:{
+        paddingLeft: 15,
+        paddingRight: 15,
+        paddingBottom: 40
+    },
+    expandedStartTourButton:{
+        backgroundColor: '#CC1840'
+    },
+    expandedStartTourView:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingRight: 15
+    },
+    expandedLocationText:{
+        alignSelf: 'center'
+    }
+
 });

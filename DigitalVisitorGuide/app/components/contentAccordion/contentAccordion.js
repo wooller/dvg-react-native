@@ -5,13 +5,16 @@
  */
 
 import React from 'react';
-import { Text, TouchableOpacity, View, Animated, Image } from 'react-native';
+import { Text, TouchableOpacity, View, Animated, Image, ImageBackground } from 'react-native';
 import {ViewPropTypes} from 'react-native';
 import {PropTypes} from 'prop-types'
-import styles from './styles';
+import tourStyles from './styles';
 import textStyles from '../../config/textStyles';
+import buttonStyles from '../../config/buttonStyles';
 import createReactClass from 'create-react-class';
 import Accordion from 'react-native-collapsible/Accordion';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import Button from '../button/index';
 
 
 const ContentAccordion = createReactClass({
@@ -27,24 +30,34 @@ const ContentAccordion = createReactClass({
         };
     },
 
-    _renderHeader(section) {
+    _renderTourHeader(section) {
         return (
-            <View style={styles.header}>
-                <Image style={styles.headerImage} source={section.image}>
-                    <View style={styles.spacerContainer} />
-                    <View style={styles.headerTitleContainer}>
-                        <Text style={[textStyles.contentAccordionTitle, styles.headerTitle]}>{section.title}</Text>
+            <View style={tourStyles.header}>
+                <ImageBackground style={tourStyles.headerImageView} imageStyle={tourStyles.headerImage} source={section.image}>
+                    <View style={tourStyles.spacerContainer} />
+                    <View style={tourStyles.headerTitleContainer}>
+                        <Text style={[textStyles.contentAccordionTitle, tourStyles.headerTitle]}>{section.title}</Text>
                     </View>
-                </Image>
+                </ImageBackground>
 
             </View>
         );
     },
 
-    _renderContent(section) {
+    _renderTourContent(section) {
         return (
-            <View style={styles.expandedView}>
-                <Text>{section.title}</Text>
+            <View style={tourStyles.expandedView}>
+                <View style={tourStyles.expandedTourLengthView}>
+                    <Icon name="clock-o" style={tourStyles.expandedTourLengthIcon} size={15} color="#000" />
+                    <Text style={[textStyles.contentAccordionTourLength, tourStyles.expandedTourLength]}>{section.tourLength}</Text>
+                </View>
+                <View style={tourStyles.expandedDescriptionView}>
+                    <Text style={[textStyles.contentAccordionDescription, tourStyles.expandedDescription]}>{section.description}</Text>
+                </View>
+                <View style={tourStyles.expandedStartTourView}>
+                    <Button text="Start tour" buttonStyles={[buttonStyles.contentAccordionButton, tourStyles.expandedStartTourButton]} textStyles={buttonStyles.contentAccordionButtonText} hasChevron={true}/>
+                    <Text style={[textStyles.contentAccordionLocationText, tourStyles.expandedLocationText]}>{section.startLocation}</Text>
+                </View>
             </View>
         );
     },
@@ -52,11 +65,11 @@ const ContentAccordion = createReactClass({
     render() {
 
         return (
-                <Accordion
-                    sections={this.props.sections}
-                    renderHeader={this._renderHeader}
-                    renderContent={this._renderContent}
-                />
+            <Accordion
+                sections={this.props.sections}
+                renderHeader={this._renderTourHeader}
+                renderContent={this._renderTourContent}
+            />
         );
     },
 });

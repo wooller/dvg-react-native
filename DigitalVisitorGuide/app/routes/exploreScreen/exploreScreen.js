@@ -17,30 +17,103 @@ import ContentAccordion from '../../components/contentAccordion/index';
 
 const ExploreScreen = (props) => {
 
-    const sections = [
+    const allSections = [
         {
             title: 'Welcome',
             image: images.welcomeAccordionImage,
+            tourLength: '15 MINS',
+            description: 'Step inside the luxurious lodgings of two ancient kings when you visit the Medieval Palace.',
+            startLocation: 'Starts at Medieval Palace',
+            contentType: 'tour'
         },
         {
-            title: 'Welcome',
-            image: images.welcomeAccordionImage,
+            title: 'St Thomas’ Tower and Traitors Gate',
+            image: images.thomasAccordionImage,
+            tourLength: '15 MINS',
+            description: 'Step inside the luxurious lodgings of two ancient kings when you visit the Medieval Palace.',
+            startLocation: 'Starts at Traitors Gate',
+            contentType: 'tour'
         },
         {
-            title: 'Welcome',
-            image: images.welcomeAccordionImage,
+            title: 'Medieval Palace',
+            image: images.medievalAccordionImage,
+            tourLength: '15 MINS',
+            description: 'Step inside the luxurious lodgings of two ancient kings when you visit the Medieval Palace.',
+            startLocation: 'Starts at Medieval Palace',
+            contentType: 'tour'
         },
         {
-            title: 'Welcome',
-            image: images.welcomeAccordionImage,
+            title: 'Normans and before',
+            image: images.normansAccordionImage,
+            tourLength: '15 MINS',
+            description: 'Step inside the luxurious lodgings of two ancient kings when you visit the Medieval Palace.',
+            startLocation: 'Starts at Medieval Palace',
+            contentType: 'tour'
         },
         {
-            title: 'Welcome',
-            image: images.welcomeAccordionImage,
+            title: 'Imprisonment and Execution',
+            image: images.imprisonmentAccordionImage,
+            tourLength: '15 MINS',
+            description: 'Step inside the luxurious lodgings of two ancient kings when you visit the Medieval Palace.',
+            startLocation: 'Starts at Medieval Palace',
+            contentType: 'tour'
         },
         {
-            title: 'Welcome',
-            image: images.welcomeAccordionImage,
+            title: 'Overview of The Crown Jewels',
+            image: images.crownAccordionImage,
+            tourLength: '15 MINS',
+            description: 'Step inside the luxurious lodgings of two ancient kings when you visit the Medieval Palace.',
+            startLocation: 'Starts at Medieval Palace',
+            contentType: 'tour'
+        },
+        {
+            title: 'Life at The Tower',
+            image: images.towerAccordionImage,
+            tourLength: '15 MINS',
+            description: 'Step inside the luxurious lodgings of two ancient kings when you visit the Medieval Palace.',
+            startLocation: 'Starts at Medieval Palace',
+            contentType: 'tour'
+        }
+    ];
+
+    const fortressSections = [
+        {
+            title: 'Normans and before',
+            image: images.normansAccordionImage,
+            tourLength: '15 MINS',
+            description: 'Step inside the luxurious lodgings of two ancient kings when you visit the Medieval Palace.',
+            startLocation: 'Starts at Medieval Palace',
+            contentType: 'tour'
+        }
+    ];
+
+    const palaceSections = [
+        {
+            title: 'Medieval Palace',
+            image: images.medievalAccordionImage,
+            tourLength: '15 MINS',
+            description: 'Step inside the luxurious lodgings of two ancient kings when you visit the Medieval Palace.',
+            startLocation: 'Starts at Medieval Palace',
+            contentType: 'tour'
+        },
+        {
+            title: 'Overview of The Crown Jewels',
+            image: images.crownAccordionImage,
+            tourLength: '15 MINS',
+            description: 'Step inside the luxurious lodgings of two ancient kings when you visit the Medieval Palace.',
+            startLocation: 'Starts at Medieval Palace',
+            contentType: 'tour'
+        }
+    ];
+
+    const prisonSections = [
+        {
+            title: 'Imprisonment and Execution',
+            image: images.imprisonmentAccordionImage,
+            tourLength: '15 MINS',
+            description: 'Step inside the luxurious lodgings of two ancient kings when you visit the Medieval Palace.',
+            startLocation: 'Starts at Medieval Palace',
+            contentType: 'tour'
         }
     ];
 
@@ -59,13 +132,28 @@ const ExploreScreen = (props) => {
             >
                 <View style={{flex: 1}} tabLabel='All'>
                     <FlatList
-                        data={[{key: sections}]}
+                        data={[{key: allSections}]}
                         renderItem={({item}) => (<ContentAccordion sections={item.key}/>)}
                     />
                 </View>
-                <Text tabLabel='Fortress'>test</Text>
-                <Text tabLabel='Palace'>project</Text>
-                <Text tabLabel='Prison'>project</Text>
+                <View style={{flex: 1}} tabLabel='Fortress'>
+                    <FlatList
+                        data={[{key: fortressSections}]}
+                        renderItem={({item}) => (<ContentAccordion sections={item.key}/>)}
+                    />
+                </View>
+                <View style={{flex: 1}} tabLabel='Palace'>
+                    <FlatList
+                        data={[{key: palaceSections}]}
+                        renderItem={({item}) => (<ContentAccordion sections={item.key}/>)}
+                    />
+                </View>
+                <View style={{flex: 1}} tabLabel='Prison'>
+                    <FlatList
+                        data={[{key: prisonSections}]}
+                        renderItem={({item}) => (<ContentAccordion sections={item.key}/>)}
+                    />
+                </View>
             </ScrollableTabView>
 
         </View>

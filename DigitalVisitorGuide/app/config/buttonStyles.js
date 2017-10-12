@@ -17,5 +17,19 @@ export default StyleSheet.create({
       fontSize: 16,
       fontWeight: 'normal',
       marginLeft: 22
+    },
+    contentAccordionButton:{
+        backgroundColor: '#908F88',
+        height: 50,
+        minWidth: 140,
+        alignSelf: 'flex-start',
+        alignItems: 'center'
+    },
+    contentAccordionButtonText:{
+        fontFamily: 'FaraoText',
+        fontSize: 14,
+        lineHeight: 20,
+        fontWeight: 'normal',
+        marginLeft: 15
     }
 });
