@@ -125,7 +125,7 @@ const ExploreScreen = (props) => {
             <Text style={[textStyles.headingThree, styles.title]}>Explore the Tower</Text>
             <ScrollableTabView
                 style={{marginTop: 20, }}
-                initialPage={1}
+                initialPage={0}
                 renderTabBar={() => <TabBar />}
                 tabBarTextStyle={textStyles.tabBarHeading}
                 underlayColor={'transparent'}

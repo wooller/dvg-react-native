@@ -19,8 +19,12 @@ export default StyleSheet.create({
     headerImageView:{
         flex: 1
     },
-    headerTitle:{
+    headerTitleContainer:{
+        flexDirection: 'row',
         backgroundColor: 'rgba(255,255,255,0.8)',
+        justifyContent: 'space-between'
+    },
+    headerTitle:{
         paddingTop: 20,
         paddingBottom: 20,
         paddingLeft: 15,
