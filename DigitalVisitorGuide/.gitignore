@@ -56,3 +56,4 @@ fastlane/screenshots
 #
 .env.example
 .env
+/android/app/dvg-release-key.keystore
