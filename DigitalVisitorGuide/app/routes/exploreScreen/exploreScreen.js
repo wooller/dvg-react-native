@@ -55,6 +55,7 @@ const ExploreScreen = (props) => {
                 initialPage={1}
                 renderTabBar={() => <TabBar />}
                 tabBarTextStyle={textStyles.tabBarHeading}
+                underlayColor={'transparent'}
             >
                 <View style={{flex: 1}} tabLabel='All'>
                     <FlatList
