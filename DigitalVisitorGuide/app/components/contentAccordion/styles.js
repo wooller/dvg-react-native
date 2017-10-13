@@ -28,6 +28,12 @@ export default StyleSheet.create({
         paddingTop: 20,
         paddingBottom: 20,
         paddingLeft: 15,
+        flex: 10
+    },
+    contentAccordionExpandIcon: {
+        marginRight: 15,
+        alignSelf: 'center',
+        flex: 1
     },
     expandedView:{
         height: 250

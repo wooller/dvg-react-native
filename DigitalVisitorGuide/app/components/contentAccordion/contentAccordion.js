@@ -37,7 +37,7 @@ const ContentAccordion = createReactClass({
                     <View style={tourStyles.spacerContainer} />
                     <View style={tourStyles.headerTitleContainer}>
                         <Text style={[textStyles.contentAccordionTitle, tourStyles.headerTitle]}>{section.title}</Text>
-                        <Icon name="chevron-down" style={tourStyles.contentAccordionExpandIcon} size={30} color="#000" />
+                        <Icon name="chevron-down" style={tourStyles.contentAccordionExpandIcon} size={20} color="#000" />
                     </View>
                 </ImageBackground>
 
