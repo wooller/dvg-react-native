@@ -17,7 +17,6 @@ import Reactotron from 'reactotron-react-native'
 const store = configureStore();
 registerScreens(store, Provider);
 requestStoragePermission();
-Reactotron.log('test');
 
 Navigation.startSingleScreenApp({
     appStyle: {

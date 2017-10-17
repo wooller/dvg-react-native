@@ -11,7 +11,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Button = (props) => {
     const { buttonStyles, textStyles, text, onPress, hasChevron } = props;
-    let chevron = null
+    let chevron = null;
     if (hasChevron){
        chevron = (<Icon name="chevron-right" style={styles.chevron} size={15} color="#fff" />)
     }

@@ -7,21 +7,5 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-    button: {
-        paddingVertical: 20,
-        alignSelf: "stretch",
-        alignItems: 'center',
-        backgroundColor: 'black',
-        flexDirection:'row'
 
-    },
-    buttonText: {
-        color: 'white',
-        fontSize: 16,
-        fontWeight: '500',
-        justifyContent: 'flex-start'
-    },
-    chevron:{
-      marginLeft: 30
-    }
 });
