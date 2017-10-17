@@ -18,7 +18,7 @@ class exploreScreenContainer extends Component {
 
     render() {
         return (
-            <ExploreScreen />
+            <ExploreScreen navigator={ this.props.navigator } />
         );
     }
 }
