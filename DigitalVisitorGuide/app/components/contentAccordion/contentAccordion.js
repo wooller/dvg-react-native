@@ -12,10 +12,16 @@ import tourStyles from './styles';
 import textStyles from '../../config/textStyles';
 import buttonStyles from '../../config/buttonStyles';
 import createReactClass from 'create-react-class';
+import * as Animatable from 'react-native-animatable';
 import Accordion from 'react-native-collapsible/Accordion';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Button from '../button/index';
 
+import Reactotron from 'reactotron-react-native'
+
+let chevronIcon = null;
+
+AnimIcon = Animatable.createAnimatableComponent(Icon);
 
 const ContentAccordion = createReactClass({
     propTypes: {
@@ -30,6 +36,10 @@ const ContentAccordion = createReactClass({
         };
     },
 
+    _animateIcon(){
+      Reactotron.log(chevronIcon);
+    },
+
     _renderTourHeader(section) {
         return (
             <View style={tourStyles.header}>
@@ -37,10 +47,9 @@ const ContentAccordion = createReactClass({
                     <View style={tourStyles.spacerContainer} />
                     <View style={tourStyles.headerTitleContainer}>
                         <Text style={[textStyles.contentAccordionTitle, tourStyles.headerTitle]}>{section.title}</Text>
-                        <Icon name="chevron-down" style={tourStyles.contentAccordionExpandIcon} size={20} color="#000" />
+                        {/*<AnimIcon ref={(AnimIcon) => { chevronIcon = AnimIcon; }} name="chevron-down" style={tourStyles.contentAccordionExpandIcon} size={20} color="#000" />*/}
                     </View>
                 </ImageBackground>
-
             </View>
         );
     },
@@ -70,6 +79,9 @@ const ContentAccordion = createReactClass({
                 sections={this.props.sections}
                 renderHeader={this._renderTourHeader}
                 renderContent={this._renderTourContent}
+                //onChange={() => this.chevronIcon.transitionTo({opacity: 0.2})}
+                //onChange={() => chevronIcon.fadeOut(200)}
+                //onChange={this._animateIcon}
             />
         );
     },
