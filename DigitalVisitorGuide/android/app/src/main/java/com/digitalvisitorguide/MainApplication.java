@@ -11,8 +11,9 @@ import com.facebook.soloader.SoLoader;
 
 import java.util.Arrays;
 import java.util.List;
-import com.crashlytics.android.Crashlytics; 
+import com.crashlytics.android.Crashlytics;
 import io.fabric.sdk.android.Fabric;
+import com.rnimmersive.RNImmersivePackage;
 
 public class MainApplication extends NavigationApplication {
 @Override
@@ -32,6 +33,7 @@ public class MainApplication extends NavigationApplication {
      // No need to add RnnPackage and MainReactPackage
      return Arrays.<ReactPackage>asList(
          // eg. new VectorIconsPackage()
+         new RNImmersivePackage()
      );
   }
 

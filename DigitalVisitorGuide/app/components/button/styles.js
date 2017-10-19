@@ -22,6 +22,7 @@ export default StyleSheet.create({
         justifyContent: 'flex-start'
     },
     chevron:{
-      marginLeft: 30
+      marginLeft: 15,
+      marginRight: 15
     }
 });

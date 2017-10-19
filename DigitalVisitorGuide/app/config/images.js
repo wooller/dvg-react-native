@@ -13,6 +13,7 @@ const images = {
     imprisonmentAccordionImage: require('../images/imprisonment_accordion_image.jpg'),
     crownAccordionImage: require('../images/crown_accordion_image.jpg'),
     towerAccordionImage: require('../images/tower_accordion_image.jpg'),
+    trackScreenImage: require('../images/track_image.jpg'),
 };
 
 export default images;

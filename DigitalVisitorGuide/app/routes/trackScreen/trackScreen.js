@@ -10,13 +10,29 @@ import styles from './styles';
 import images from '../../config/images';
 import MenuButton from '../../components/menuButton/index'
 import textStyles from '../../config/textStyles';
+import buttonStyles from '../../config/buttonStyles'
 import TabBar from '../../components/tabBar/index'
+import Button from '../../components/button/index'
+import * as Animatable from 'react-native-animatable';
 
 const TrackScreen = (props) => {
 
     return (
         <View style={styles.container}>
+            <View style={styles.trackInfo}>
+                <Image style={styles.trackImage} source={images.trackScreenImage}>
+                    <View style={styles.detailSpacer} />
+                    <Animatable.View animation="fadeInUp" duration={1000} delay={750} style={styles.trackDetail}>
+                        <Text style={[textStyles.trackScreenRouteTitle, styles.routeTitle]}>Medieval Palace</Text>
+                        <Text style={[textStyles.trackScreenTrackTitle, styles.trackTitle]}>Fabrics and furnishings</Text>
+                        <Text style={[textStyles.contentAccordionDescription, styles.trackDescription]}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus erat sem, sodales porttitor sapien ultricies at. So does this text go?</Text>
+                        <Button text="Explore deeper" buttonStyles={[buttonStyles.contentAccordionButton, styles.diveButton]} textStyles={buttonStyles.contentAccordionButtonText} hasChevron={true}/>
+                    </Animatable.View>
+                </Image>
+            </View>
+            <View style={styles.mediaPlayer}>
 
+            </View>
         </View>
     );
 };

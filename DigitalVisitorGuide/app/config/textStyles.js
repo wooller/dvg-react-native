@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import { StyleSheet, Platform } from 'react-native';
+import {globalStyles} from './styles';
 
 export default StyleSheet.create({
     headingOne:{
@@ -47,6 +48,18 @@ export default StyleSheet.create({
         fontFamily: 'OpenSans-Italic',
         fontSize: 14,
         lineHeight: 19,
+        color: 'black'
+    },
+    trackScreenRouteTitle:{
+        fontFamily: 'OpenSans-SemiBold',
+        fontSize: 14,
+        lineHeight: 23,
+        color: globalStyles.grey
+    },
+    trackScreenTrackTitle:{
+        fontFamily: 'FaraoText',
+        fontSize: 29,
+        lineHeight: 35,
         color: 'black'
     }
 });
