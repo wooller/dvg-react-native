@@ -7,7 +7,7 @@
 
 import { AppRegistry } from 'react-native';
 import App from './app/index';
-import { Immersive } from 'react-native-immersive'
-Immersive.on();
+//import { Immersive } from 'react-native-immersive'
+//Immersive.on();
 
 AppRegistry.registerComponent('DigitalVisitorGuide', () => App);
