@@ -77,7 +77,8 @@
   },
   "rnpm": {
     "assets": [
-      "./app/fonts/"
+      "./app/fonts/",
+      "./app/icons/iconFonts"
     ]
   }
 }

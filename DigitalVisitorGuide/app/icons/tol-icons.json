@@ -1,0 +1,140 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M787.2 0v1024l-512-512 512-512z",
+          "M102.4 1024h-102.4v-1024h102.4v1024z"
+        ],
+        "attrs": [
+          {},
+          {}
+        ],
+        "width": 832,
+        "grid": 0,
+        "tags": [
+          "previous"
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false
+      },
+      "attrs": [
+        {},
+        {}
+      ],
+      "properties": {
+        "order": 2,
+        "id": 2,
+        "name": "previous",
+        "prevSize": 32,
+        "code": 59648
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
+          "M19.2 1024v-1024l512 512-512 512z",
+          "M697.6 0h102.4v1024h-102.4v-1024z"
+        ],
+        "attrs": [
+          {},
+          {}
+        ],
+        "width": 832,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "next"
+        ]
+      },
+      "attrs": [
+        {},
+        {}
+      ],
+      "properties": {
+        "order": 3,
+        "id": 1,
+        "name": "next",
+        "prevSize": 32,
+        "code": 59649
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 1
+    },
+    {
+      "icon": {
+        "paths": [
+          "M1022.293 512c0 273.345-221.588 494.933-494.933 494.933v34.133c292.195 0 529.067-236.872 529.067-529.067h-34.133zM527.36 1006.933c-273.345 0-494.933-221.588-494.933-494.933h-34.133c0 292.195 236.872 529.067 529.067 529.067v-34.133zM32.427 512c0-273.345 221.588-494.933 494.933-494.933v-34.133c-292.195 0-529.067 236.872-529.067 529.067h34.133zM527.36 17.067c273.345 0 494.933 221.588 494.933 494.933h34.133c0-292.195-236.872-529.067-529.067-529.067v34.133z",
+          "M464.213 704v-384l192 192-192 192z"
+        ],
+        "attrs": [
+          {},
+          {}
+        ],
+        "width": 1041,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "play"
+        ]
+      },
+      "attrs": [
+        {},
+        {}
+      ],
+      "properties": {
+        "order": 4,
+        "id": 0,
+        "name": "play",
+        "prevSize": 32,
+        "code": 59650
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 2
+    }
+  ],
+  "height": 1024,
+  "metadata": {
+    "name": "tolicons"
+  },
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "tolicons",
+        "majorVersion": 1,
+        "minorVersion": 0
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false,
+      "resetPoint": 59648
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon"
+    },
+    "historySize": 50,
+    "showCodes": true,
+    "gridSize": 16
+  }
+}

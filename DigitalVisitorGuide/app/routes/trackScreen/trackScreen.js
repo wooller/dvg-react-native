@@ -13,6 +13,7 @@ import textStyles from '../../config/textStyles';
 import buttonStyles from '../../config/buttonStyles'
 import TabBar from '../../components/tabBar/index'
 import Button from '../../components/button/index'
+import AudioPlayer from '../../components/audioPlayer/index'
 import * as Animatable from 'react-native-animatable';
 
 const TrackScreen = (props) => {
@@ -30,9 +31,9 @@ const TrackScreen = (props) => {
                     </Animatable.View>
                 </Image>
             </View>
-            <View style={styles.mediaPlayer}>
-
-            </View>
+            <Animatable.View animation="fadeIn" duration={750} delay={250} style={styles.mediaPlayer}>
+                <AudioPlayer/>
+            </Animatable.View>
         </View>
     );
 };

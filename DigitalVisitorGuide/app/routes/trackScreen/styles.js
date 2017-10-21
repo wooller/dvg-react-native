@@ -40,6 +40,8 @@ export default StyleSheet.create({
         backgroundColor: '#CC1840'
     },
     mediaPlayer: {
-        flex: 0.25
+        flex: 0.25,
+        marginLeft: 20,
+        marginRight: 20
     }
 });

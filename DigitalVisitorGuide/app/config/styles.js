@@ -7,5 +7,6 @@ export const globalStyles = {
     accentColor: '#77776E',
     darkGrey: '#333333',
     grey: '#606060',
+    red: '#CC1840',
     navigationAnimation: 'slide-horizontal'
 };
