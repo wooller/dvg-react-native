@@ -14,7 +14,10 @@ export default StyleSheet.create({
         flex: 1,
     },
     headerImage: {
-        resizeMode: 'contain'
+        width: null,
+        height: null,
+        flex: 1,
+        resizeMode: 'cover',
     },
     headerImageView:{
         flex: 1
