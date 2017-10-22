@@ -178,6 +178,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-audio-kit')
     compile project(':react-native-immersive')
     compile project(':react-native-fs')
     compile project(':react-native-fabric')
