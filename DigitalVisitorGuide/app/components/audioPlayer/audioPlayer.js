@@ -45,6 +45,7 @@ const AudioPlayer = createReactClass({
     componentWillMount() {
         this.player = null;
         this._reloadPlayer();
+        this.lastSeek = 0;
 
         this._progressInterval = setInterval(() => {
             if (this.player && this._shouldUpdateProgressBar()) {// && !this._dragging) {
