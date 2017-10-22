@@ -40,7 +40,8 @@
     "react-native-vector-icons": "4.3.0",
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "react-native-audio-kit": "https://github.com/damianham/react-native-audio-kit.git"
   },
   "devDependencies": {
     "babel-eslint": "7.1.1",
