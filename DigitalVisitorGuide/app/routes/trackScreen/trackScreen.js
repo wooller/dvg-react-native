@@ -22,6 +22,11 @@ const TrackScreen = (props) => {
         <View style={styles.container}>
             <View style={styles.trackInfo}>
                 <Image style={styles.trackImage} source={images.trackScreenImage}>
+                    <View style={styles.headerContainer}>
+                        <MenuButton style={styles.menuButton}
+                                    color={'#ffffff'}
+                                    onPress={() => this.props.navigator.toggleDrawer({side: 'right', animated: true}) }/>
+                    </View>
                     <View style={styles.detailSpacer} />
                     <Animatable.View animation="fadeInUp" useNativeDriver={true} duration={1000} delay={750} style={styles.trackDetail}>
                         <Text style={[textStyles.trackScreenRouteTitle, styles.routeTitle]}>Medieval Palace</Text>

@@ -14,6 +14,16 @@ export default StyleSheet.create({
     trackInfo: {
         flex: 1,
     },
+    menuButton:{
+        alignSelf: 'flex-end'
+    },
+    headerContainer: {
+        height: 30,
+        marginLeft: 20,
+        marginRight: 20,
+        marginTop: 20,
+        alignItems: 'flex-end',
+    },
     trackImage:{
         width: null,
         height: null,
