@@ -23,7 +23,7 @@ const TrackScreen = (props) => {
             <View style={styles.trackInfo}>
                 <Image style={styles.trackImage} source={images.trackScreenImage}>
                     <View style={styles.detailSpacer} />
-                    <Animatable.View animation="fadeInUp" duration={1000} delay={750} style={styles.trackDetail}>
+                    <Animatable.View animation="fadeInUp" useNativeDriver={true} duration={1000} delay={750} style={styles.trackDetail}>
                         <Text style={[textStyles.trackScreenRouteTitle, styles.routeTitle]}>Medieval Palace</Text>
                         <Text style={[textStyles.trackScreenTrackTitle, styles.trackTitle]}>Fabrics and furnishings</Text>
                         <Text style={[textStyles.contentAccordionDescription, styles.trackDescription]}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus erat sem, sodales porttitor sapien ultricies at. So does this text go?</Text>
@@ -31,7 +31,7 @@ const TrackScreen = (props) => {
                     </Animatable.View>
                 </Image>
             </View>
-            <Animatable.View animation="fadeIn" duration={750} delay={250} style={styles.mediaPlayer}>
+            <Animatable.View animation="fadeIn" useNativeDriver={true} duration={750} delay={250} style={styles.mediaPlayer}>
                 <AudioPlayer/>
             </Animatable.View>
         </View>
