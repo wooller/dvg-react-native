@@ -10,6 +10,7 @@ import {ViewPropTypes} from 'react-native';
 import {PropTypes} from 'prop-types'
 import styles from './styles';
 import {globalStyles} from '../../config/styles';
+import TextStyles from '../../config/textStyles'
 import Slider from "react-native-slider";
 import createReactClass from 'create-react-class';
 import Icon from '../../config/customIcons';
@@ -24,6 +25,8 @@ const AudioPlayer = createReactClass({
     getInitialState: function() {
         return {
             progress: 0,
+            totalTime: '00:00',
+            currentTime: '00:00',
             playPauseButton: <Icon name="play" style={styles.playIcon} size={60} color="#000" />,
         };
 
@@ -49,7 +52,10 @@ const AudioPlayer = createReactClass({
 
         this._progressInterval = setInterval(() => {
             if (this.player && this._shouldUpdateProgressBar()) {// && !this._dragging) {
-                this.setState({progress: Math.max(0, this.player.currentTime) / this.player.duration});
+                this.setState({
+                    progress: Math.max(0, this.player.currentTime) / this.player.duration,
+                    currentTime: this.player ? this._convertMStoTime(this.player.currentTime ) : '00:00'
+                });
             }
         }, 100);
     },
@@ -68,10 +74,23 @@ const AudioPlayer = createReactClass({
     _updateState(err) {
         this.setState({
             playPauseButton: this.player && this.player.isPlaying  ? <Icon name="pause" style={styles.playIcon} size={60} color="#000" /> : <Icon name="play" style={styles.playIcon} size={60} color="#000" />,
-
+            totalTime: this.player ? this._convertMStoTime(this.player.duration ) : '00:00',
             //playButtonDisabled:   !this.player   || !this.player.canPlay || this.recorder.isRecording,
 
         });
+    },
+
+    _convertMStoTime(ms){
+        ms = 1000*Math.round(ms/1000); // round to nearest second
+        let d = new Date(ms);
+
+        let mins = d.getUTCMinutes();
+        mins = mins<10 ? '0'+mins : mins;
+
+        let secs = d.getUTCSeconds();
+        secs = secs<10 ? '0'+secs : secs;
+
+        return mins + ':' + secs
     },
 
     _reloadPlayer() {
@@ -133,6 +152,10 @@ const AudioPlayer = createReactClass({
         return (
             <View style={styles.container}>
                 <View style={styles.topContainer}>
+                    <View style={styles.timesContainer}>
+                        <Text style={[TextStyles.contentAccordionTourLength, styles.currentTime]}>{this.state.currentTime}</Text>
+                        <Text style={[TextStyles.contentAccordionTourLength, styles.totalTime]}>{this.state.totalTime}</Text>
+                    </View>
                     <Slider
                         style={styles.scrubber}
                         value={this.state.progress}

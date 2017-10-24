@@ -8,22 +8,26 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     container:{
-        flex: 1
+        flex: 1,
     },
     topContainer:{
-        flex: 0.3,
+        flex: 0.45,
         alignItems: "stretch",
-        justifyContent: "center",
+        justifyContent: "flex-end",
+    },
+    timesContainer:{
+        flexDirection: 'row',
+        justifyContent: 'space-between'
     },
     scrubberThumb:{
         width: 10,
         height: 10,
     },
     bottomContainer:{
-        flex: 1,
+        flex: 0.55,
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     playIcon: {
         marginLeft: 30,
