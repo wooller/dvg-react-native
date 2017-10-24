@@ -46,7 +46,7 @@ export default class TrackScreen extends PureComponent {
                                 furnishings</Text>
                             <Text style={[textStyles.contentAccordionDescription, styles.trackDescription]}>Lorem ipsum
                                 dolor sit amet, consectetur adipiscing elit. Praesent cursus erat sem, sodales porttitor
-                                sapien ultricies at. So does this text go?</Text>
+                                sapien ultricies at.</Text>
                             <Button text="Explore deeper"
                                     buttonStyles={[buttonStyles.contentAccordionButton, styles.diveButton]}
                                     textStyles={buttonStyles.contentAccordionButtonText} hasChevron={true}/>
