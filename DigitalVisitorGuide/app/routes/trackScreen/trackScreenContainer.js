@@ -18,7 +18,7 @@ class trackScreenContainer extends Component {
 
     render() {
         return (
-            <TrackScreen />
+            <TrackScreen navigator={ this.props.navigator }/>
         );
     }
 }

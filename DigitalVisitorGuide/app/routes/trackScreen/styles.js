@@ -23,6 +23,8 @@ export default StyleSheet.create({
         marginRight: 20,
         marginTop: 20,
         alignItems: 'flex-end',
+        flexDirection: 'row',
+        justifyContent: 'space-between'
     },
     trackImage:{
         width: null,

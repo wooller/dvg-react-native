@@ -23,7 +23,7 @@ Navigation.startSingleScreenApp({
         keepStyleAcrossPush: false
     },
     screen: {
-        screen: 'digitalVisitorGuide.trackScreen',
+        screen: 'digitalVisitorGuide.welcomeScreen',
     },
     drawer: {
       right: {
