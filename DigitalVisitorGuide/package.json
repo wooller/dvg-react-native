@@ -32,13 +32,16 @@
     "react-native-fabric": "^0.5.1",
     "react-native-fs": "^2.5.2",
     "react-native-i18n": "1.0.0",
+    "react-native-immersive": "^1.1.0",
     "react-native-navigation": "^1.1.230",
     "react-native-scrollable-tab-view": "^0.8.0",
+    "react-native-slider": "^0.11.0",
     "react-native-tab-view": "0.0.69",
     "react-native-vector-icons": "4.3.0",
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "react-native-audio-kit": "https://github.com/damianham/react-native-audio-kit.git"
   },
   "devDependencies": {
     "babel-eslint": "7.1.1",
@@ -75,7 +78,8 @@
   },
   "rnpm": {
     "assets": [
-      "./app/fonts/"
+      "./app/fonts/",
+      "./app/icons/iconFonts"
     ]
   }
 }

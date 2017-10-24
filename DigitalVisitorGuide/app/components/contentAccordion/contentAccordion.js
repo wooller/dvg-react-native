@@ -25,7 +25,8 @@ AnimIcon = Animatable.createAnimatableComponent(Icon);
 
 const ContentAccordion = createReactClass({
     propTypes: {
-        sections: PropTypes.array
+        sections: PropTypes.array,
+        onPress: React.PropTypes.func,
     },
 
     getDefaultProps() {
@@ -65,7 +66,7 @@ const ContentAccordion = createReactClass({
                     <Text style={[textStyles.contentAccordionDescription, tourStyles.expandedDescription]}>{section.description}</Text>
                 </View>
                 <View style={tourStyles.expandedStartTourView}>
-                    <Button text="Start tour" buttonStyles={[buttonStyles.contentAccordionButton, tourStyles.expandedStartTourButton]} textStyles={buttonStyles.contentAccordionButtonText} hasChevron={true}/>
+                    <Button text="Start tour" buttonStyles={[buttonStyles.contentAccordionButton, tourStyles.expandedStartTourButton]} textStyles={buttonStyles.contentAccordionButtonText} hasChevron={true} onPress={this.props.onPress}/>
                     <Text style={[textStyles.contentAccordionLocationText, tourStyles.expandedLocationText]}>{section.startLocation}</Text>
                 </View>
             </View>

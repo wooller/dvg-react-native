@@ -4,9 +4,9 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import ExploreScreen from './exploreScreen';
+import TrackScreen from './trackScreen';
 
-class exploreScreenContainer extends Component {
+class trackScreenContainer extends Component {
     static navigatorStyle = {
         navBarHidden: true,
     };
@@ -18,7 +18,7 @@ class exploreScreenContainer extends Component {
 
     render() {
         return (
-            <ExploreScreen navigator={ this.props.navigator } />
+            <TrackScreen navigator={ this.props.navigator }/>
         );
     }
 }
@@ -37,4 +37,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(exploreScreenContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(trackScreenContainer);
