@@ -11,8 +11,26 @@ export default StyleSheet.create({
         width: null,
         height: null,
         flex: 1,
+        backgroundColor: 'white',
+        paddingTop: 50
+    },
+    textItem:{
+        marginLeft: 10,
+        color: 'black',
+        textAlign: 'left',
+        fontSize: 18,
+        fontFamily: 'OpenSans-Medium'
+    },
+    menuIcon:{
+        //alignSelf: 'flex-start',
+    },
+    menuItem:{
+        flex: 1,
+        flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: globalStyles.accentColor
+        justifyContent: 'flex-start',
+        marginBottom: 30,
+        marginLeft: 30,
+        marginRight: 30,
     }
 });

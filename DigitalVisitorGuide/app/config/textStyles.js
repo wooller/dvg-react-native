@@ -61,5 +61,11 @@ export default StyleSheet.create({
         fontSize: 29,
         lineHeight: 35,
         color: 'black'
+    },
+    menuItemText:{
+        fontFamily: 'OpenSans-Regular',
+        fontSize: 22,
+        lineHeight: 30,
+        color: globalStyles.darkGrey
     }
 });
