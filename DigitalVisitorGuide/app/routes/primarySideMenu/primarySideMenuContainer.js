@@ -18,7 +18,7 @@ class primarySideMenuContainer extends Component {
 
     render() {
         return (
-            <PrimarySideMenu />
+            <PrimarySideMenu navigator={ this.props.navigator } />
         );
     }
 }
